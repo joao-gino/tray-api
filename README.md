@@ -4,6 +4,8 @@
 ## Visão Geral
 
 O repositório `tray-api` é uma aplicação web desenvolvida utilizando o framework Laravel. O Laravel é conhecido por sua sintaxe expressiva e elegante, facilitando o desenvolvimento de aplicações web robustas e escaláveis.
+Existem quatro endpoints para criar vendedores, listá-los, lançar novas vendas e listá-las.
+A aplicação também possui disparo de e-mail todos os dias com o valor total de vendas realizadas.
 
 ## Estrutura de Pastas e Arquivos
 
