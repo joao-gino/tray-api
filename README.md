@@ -1,66 +1,230 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Tray API
 
-## About Laravel
+## Visão Geral
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O repositório `tray-api` é uma aplicação web desenvolvida utilizando o framework Laravel. O Laravel é conhecido por sua sintaxe expressiva e elegante, facilitando o desenvolvimento de aplicações web robustas e escaláveis.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Estrutura de Pastas e Arquivos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A estrutura do repositório é organizada da seguinte forma:
 
-## Learning Laravel
+- **app/**: Contém o núcleo da aplicação, incluindo modelos, controladores e outros componentes essenciais.
+- **bootstrap/**: Inclui o arquivo de inicialização da aplicação.
+- **config/**: Armazena os arquivos de configuração da aplicação.
+- **database/**: Contém as migrações e seeds do banco de dados.
+- **public/**: Diretório público que contém o arquivo `index.php` e outros recursos públicos, como imagens e scripts.
+- **resources/**: Armazena as views e arquivos de linguagem.
+- **routes/**: Contém os arquivos de definição de rotas da aplicação.
+- **storage/**: Diretório para logs, cache e outros arquivos gerados pela aplicação.
+- **tests/**: Inclui os testes automatizados da aplicação.
+- **.editorconfig**: Define configurações de formatação de código para editores de texto.
+- **.env.example**: Exemplo do arquivo de configuração de ambiente.
+- **.gitattributes**: Especifica atributos específicos para o Git.
+- **.gitignore**: Lista de arquivos e pastas que devem ser ignorados pelo Git.
+- **README.md**: Arquivo de documentação inicial do projeto.
+- **artisan**: Console de comandos do Laravel.
+- **composer.json**: Arquivo de configuração do Composer, gerenciador de dependências do PHP.
+- **composer.lock**: Registra as versões exatas das dependências instaladas.
+- **package.json**: Arquivo de configuração do npm, gerenciador de pacotes do Node.js.
+- **phpunit.xml**: Arquivo de configuração para o PHPUnit, framework de testes para PHP.
+- **postcss.config.js**: Configuração para o PostCSS.
+- **tailwind.config.js**: Configuração para o Tailwind CSS.
+- **vite.config.js**: Configuração para o Vite, um bundler de módulos JavaScript.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Dependências
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+As principais dependências do projeto estão listadas no arquivo `composer.json`:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **php**: Versão ^8.0.2.
+- **laravel/framework**: Versão ^9.19.
+- **laravel/sanctum**: Versão ^3.0.1.
+- **laravel/tinker**: Versão ^2.7.
 
-## Laravel Sponsors
+Além disso, o arquivo `package.json` lista dependências JavaScript, incluindo:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **axios**: Versão ^1.1.2.
+- **laravel-vite-plugin**: Versão ^0.7.2.
+- **lodash**: Versão ^4.17.19.
+- **postcss**: Versão ^8.1.14.
+- **tailwindcss**: Versão ^3.2.1.
+- **vite**: Versão ^3.0.0.
 
-### Premium Partners
+## Configuração do Ambiente
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Para configurar o ambiente de desenvolvimento:
 
-## Contributing
+1. Clone o repositório:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```bash
+   git clone https://github.com/joao-gino/tray-api.git
+   ```
 
-## Code of Conduct
+2. Navegue até o diretório do projeto:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   ```bash
+   cd tray-api
+   ```
 
-## Security Vulnerabilities
+3. Instale as dependências do PHP:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   composer install
+   ```
 
-## License
+4. Instale as dependências do Node.js:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```bash
+   npm install
+   ```
+
+5. Copie o arquivo de exemplo `.env` e configure as variáveis de ambiente conforme necessário:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+6. Gere a chave da aplicação:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+7. Execute as migrações do banco de dados:
+
+   ```bash
+   php artisan migrate
+   ```
+
+8. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   php artisan serve
+   ```
+
+## Rotas
+
+As rotas da aplicação estão definidas no arquivo `routes/api.php`.
+
+## Testes
+
+Os testes automatizados estão localizados no diretório `tests/`. O projeto utiliza o **PHPUnit** para a execução dos testes. Para rodar os testes, utilize o seguinte comando:
+
+```bash
+php artisan test
+```
+
+Ou, caso prefira utilizar o PHPUnit diretamente:
+
+```bash
+vendor/bin/phpunit
+```
+
+Caso precise criar novos testes, utilize o comando:
+
+```bash
+php artisan make:test NomeDoTeste
+```
+
+Os testes podem ser:
+
+- **Testes de Unidade**: Testam pequenas partes isoladas do código, como funções e classes específicas.
+- **Testes de Integração**: Verificam a interação entre diferentes partes do sistema.
+- **Testes Funcionais**: Simulam o comportamento real de um usuário na aplicação.
+
+## Segurança
+
+O projeto utiliza **Laravel Sanctum** para autenticação via tokens. Para configurar a autenticação:
+
+1. Execute as migrações caso ainda não tenha feito:
+
+   ```bash
+   php artisan migrate
+   ```
+
+2. No **.env**, configure a variável `SESSION_DRIVER=cookie` e outras credenciais conforme necessário.
+
+3. Para gerar um token de usuário, faça uma requisição para a rota de login (se estiver implementada) e utilize o token recebido para autenticação em outras requisições.
+
+## Logs e Debugging
+
+- Os logs da aplicação podem ser encontrados em `storage/logs/laravel.log`.
+- O Laravel fornece o comando `php artisan tinker` para testar interativamente o código diretamente no terminal.
+- Para visualizar erros e debugging, utilize a configuração `APP_DEBUG=true` no `.env`.
+
+## Implantação
+
+Caso deseje implantar a aplicação em um servidor de produção, siga os seguintes passos:
+
+1. **Configuração do ambiente**  
+   - Certifique-se de que todas as configurações do `.env` estão corretas para o ambiente de produção.
+
+2. **Instalação das dependências**  
+   ```bash
+   composer install --optimize-autoloader --no-dev
+   npm install && npm run build
+   ```
+
+3. **Execução de migrações e seeders**  
+   ```bash
+   php artisan migrate --force
+   php artisan db:seed --force
+   ```
+
+4. **Configuração de permissões**  
+   ```bash
+   chmod -R 775 storage bootstrap/cache
+   ```
+
+5. **Configuração do servidor web**  
+   - Certifique-se de que o servidor web (Nginx ou Apache) esteja configurado corretamente para apontar para o diretório `public/` do Laravel.
+
+6. **Cache de configuração para otimização**  
+   ```bash
+   php artisan config:cache
+   php artisan route:cache
+   php artisan view:cache
+   ```
+
+7. **Monitoramento e Manutenção**  
+   - Utilize ferramentas como Supervisor para manter os processos rodando, caso utilize queues.
+   - Configure backups regulares do banco de dados.
+
+## Contribuição
+
+Caso queira contribuir com o projeto, siga os seguintes passos:
+
+1. **Fork o repositório**  
+   - Clique no botão **Fork** no GitHub.
+
+2. **Clone o repositório forkado**  
+   ```bash
+   git clone https://github.com/seu-usuario/tray-api.git
+   cd tray-api
+   ```
+
+3. **Crie uma branch para a sua feature**  
+   ```bash
+   git checkout -b minha-nova-feature
+   ```
+
+4. **Implemente sua modificação e faça commit**  
+   ```bash
+   git add .
+   git commit -m "Descrição breve da mudança"
+   ```
+
+5. **Envie as mudanças para o seu fork**  
+   ```bash
+   git push origin minha-nova-feature
+   ```
+
+6. **Crie um Pull Request (PR)**  
+   - Acesse o repositório original no GitHub e clique em **New Pull Request**.
+
+## Contato
+
+Caso tenha dúvidas ou precise de suporte, você pode entrar em contato via:
+
+- **E-mail**: [joaovitorsrg@hotmail.com](mailto:joaovitorsrg@hotmail.com)
+- **GitHub Issues**: Abra uma issue no repositório caso tenha encontrado um bug ou tenha uma sugestão de melhoria.
